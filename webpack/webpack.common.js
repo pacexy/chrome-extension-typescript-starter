@@ -1,5 +1,9 @@
 const path = require('path')
 
+const webpack = require('webpack')
+
+const config = require('../mv3-hot-reload.config')
+
 const srcDir = path.join(__dirname, '..', 'src')
 
 module.exports = {
@@ -13,12 +17,6 @@ module.exports = {
     path: path.join(__dirname, '../dist/js'),
     filename: '[name].js',
   },
-  optimization: {
-    splitChunks: {
-      name: 'vendor',
-      chunks: 'initial',
-    },
-  },
   module: {
     rules: [
       {
@@ -30,5 +28,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '@': srcDir,
+    },
   },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      MV3_HOT_RELOAD_PORT: config.port,
+    }),
+  ],
 }

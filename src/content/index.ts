@@ -1,3 +1,5 @@
+import 'mv3-hot-reload/content'
+
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   if (msg.color) {
     // eslint-disable-next-line no-console
