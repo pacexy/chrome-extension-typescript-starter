@@ -1,5 +1,9 @@
 const path = require('path')
 
+const webpack = require('webpack')
+
+const config = require('../mv3-hot-reload.config')
+
 const srcDir = path.join(__dirname, '..', 'src')
 
 module.exports = {
@@ -28,4 +32,9 @@ module.exports = {
       '@': srcDir,
     },
   },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      MV3_HOT_RELOAD_PORT: config.port,
+    }),
+  ],
 }

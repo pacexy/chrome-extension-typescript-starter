@@ -4381,10 +4381,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-mv3-hot-reload@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/mv3-hot-reload/-/mv3-hot-reload-0.2.0.tgz#175bbb92587351351409b1a01fb85ded79e1df99"
-  integrity sha512-tw+jt8EyAiTYztI/hrFVD44No6EfRrJIwWkIE1FU4ruh0eekNcUZBJuVGK45zle8OxyR0hqQhHkQce9/mxakAQ==
+mv3-hot-reload@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/mv3-hot-reload/-/mv3-hot-reload-0.2.2.tgz#89c2bbf9d5dcb186b4a438856b9de1fb2b34b2c6"
+  integrity sha512-IqyS45IbgUz6SPfkEe7tpRFkHQWxj+S3Ri51CQnhCDgri6gzhtJXDdKjzTLVVgSycInkq+hdSriNLfpv40P/wA==
   dependencies:
     chokidar "^3.5.2"
     lodash "^4.17.21"
