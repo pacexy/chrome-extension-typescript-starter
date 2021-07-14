@@ -1,5 +1,5 @@
 const Options = () => {
-  return <div>Options Page</div>
+  return <div className="m-4 text-2xl text-center">Options Page</div>
 }
 
 export default Options
