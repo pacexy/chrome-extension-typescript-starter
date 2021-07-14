@@ -45,6 +45,10 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: require.resolve('babel-loader'),
