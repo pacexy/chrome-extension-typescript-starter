@@ -13,6 +13,10 @@ const isDev = process.env.NODE_ENV !== 'production'
 const srcDir = path.join(__dirname, 'src')
 const outDir = path.join(__dirname, 'dist/js')
 
+function getEntry(name: string) {
+  return [path.join(srcDir, name), ...(isDev ? [`mv3-hot-reload/${name}`] : [])]
+}
+
 const config: webpack.Configuration = {
   watch: isDev,
   mode: isDev ? 'development' : 'production',
@@ -35,8 +39,8 @@ const config: webpack.Configuration = {
   entry: {
     popup: path.join(srcDir, 'popup'),
     options: path.join(srcDir, 'options'),
-    background: path.join(srcDir, 'background'),
-    content: path.join(srcDir, 'content'),
+    background: getEntry('background'),
+    content: getEntry('content'),
   },
   output: {
     path: outDir,
