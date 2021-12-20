@@ -1,4 +1,3 @@
-import 'mv3-hot-reload/content'
 import ReactDOM from 'react-dom'
 // eslint-disable-next-line node/no-unpublished-import
 import 'tailwindcss/tailwind.css'
